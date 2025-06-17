@@ -1,15 +1,22 @@
 /** @jsxImportSource @emotion/react */
-import styled from '@emotion/styled';
+import {css} from '@emotion/react';
 
-const StyledDiv = styled.div`
-  color:#09f;
+const buttonStyle = css`
+  background-color: #f90;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+  &:hover{
+    background-color: #f00;
+  }
 `;
 
 export const App = ()=>{
   return(
     <>
-      <StyledDiv>スタイルの適用された文字</StyledDiv>
-      <StyledDiv>aaaaaaaa</StyledDiv>
+      <button css={buttonStyle}>クリックしてください</button>
     </>
   );
 };
