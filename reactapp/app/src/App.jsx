@@ -1,14 +1,15 @@
-import classes from "./App.module.css";
-export const App =()=>{
-  const onClickButton = () =>{
-    alert('click it');
-  }
+/** @jsxImportSource @emotion/react */
+import styled from '@emotion/styled';
 
-  return (
+const StyledDiv = styled.div`
+  color:#09f;
+`;
+
+export const App = ()=>{
+  return(
     <>
-      <h1 className={classes.titleText}>Hello React!!</h1>
-      <p>ReactのApp.jsxから表示しています</p>
-      <button onClick={onClickButton}  className={classes.btnLrg}>クリック</button>
+      <StyledDiv>スタイルの適用された文字</StyledDiv>
+      <StyledDiv>aaaaaaaa</StyledDiv>
     </>
   );
-}
+};
