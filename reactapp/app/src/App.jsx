@@ -1,22 +1,11 @@
-/** @jsxImportSource @emotion/react */
-import {css} from '@emotion/react';
+import ReactDOMClient from "react-dom/client";
+import { Button } from "./Button";//保存したButton.jsxを読み込む
 
-const buttonStyle = css`
-  background-color: #f90;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  transition: all 0.5s ease;
-  &:hover{
-    background-color: #f00;
-  }
-`;
-
-export const App = ()=>{
-  return(
-    <>
-      <button css={buttonStyle}>クリックしてください</button>
-    </>
+export const App = () =>{
+  return (
+    <div>
+      <Button primary={true}></Button>
+      <Button primary={false}></Button>
+    </div>
   );
 };
